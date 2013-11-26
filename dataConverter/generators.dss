@@ -1,0 +1,9 @@
+New Generator.B30 Bus1=B30 kV=22 kW=75000 Model=3 Vpu=1.047 Maxkvar=9900000 Minkvar=-9900000
+New Generator.B32 Bus1=B32 kV=22 kW=195000 Model=3 Vpu=0.983 Maxkvar=9900000 Minkvar=-9900000
+New Generator.B33 Bus1=B33 kV=22 kW=189600 Model=3 Vpu=0.997 Maxkvar=9900000 Minkvar=-9900000
+New Generator.B34 Bus1=B34 kV=22 kW=152400 Model=3 Vpu=1.012 Maxkvar=9900000 Minkvar=-9900000
+New Generator.B35 Bus1=B35 kV=22 kW=195000 Model=3 Vpu=1.049 Maxkvar=9900000 Minkvar=-9900000
+New Generator.B36 Bus1=B36 kV=22 kW=168000 Model=3 Vpu=1.063 Maxkvar=9900000 Minkvar=-9900000
+New Generator.B37 Bus1=B37 kV=22 kW=162000 Model=3 Vpu=1.027 Maxkvar=9900000 Minkvar=-9900000
+New Generator.B38 Bus1=B38 kV=22 kW=249000 Model=3 Vpu=1.026 Maxkvar=9900000 Minkvar=-9900000
+New Generator.B39 Bus1=B39 kV=345 kW=300000 Model=3 Vpu=1.03 Maxkvar=9900000 Minkvar=-9900000

@@ -1,0 +1,73 @@
+
+// Standard IEEE 30-Bus Transmission System Test Case
+
+Compile Master.DSS
+
+//Plot Loadshape Object=Loadshape2  
+
+! The compile builds the circuit model and sets the voltage bases
+
+! sometimes this model needs more than the default 15 iterations
+Set maxiterations=100
+Set Maxcontroliter=100
+
+! This command solves the base case power flow
+!set mode = daily  number = 1 stepsize = 30 ! algorithm=Newton
+Solve algorithm=Newton
+
+Show Y
+Show BusList
+
+/////////////////////////////////////////////////////
+
+Generator.b2.kw=48398.9164
+ 
+Generator.b2.vpu=1.0422
+ 
+Generator.b2.kvar=93.4663
+!Generator.b2.model=7
+ 
+Generator.b5.kw=0.96617
+ 
+Generator.b5.vpu=1.0182
+ 
+Generator.b5.kvar=18433.2421
+Generator.b5.model=7
+ 
+Generator.b8.kw=0.95642
+ 
+Generator.b8.vpu=1.0231
+ 
+Generator.b8.kvar=20374.3038
+Generator.b8.model=7
+ 
+Generator.b11.kw=0.95254
+ 
+Generator.b11.vpu=1.0306
+ 
+Generator.b11.kvar=1156.5599
+Generator.b11.model=7
+ 
+Generator.b13.kw=0.95256  vpu=1.0543
+ 
+Generator.b13.vpu=1.0543
+ 
+Generator.b13.kvar=15243.8772
+Generator.b13.model=7
+
+vsource.source.pu=1.06
+Solve 
+_SolveNoControl
+
+Dump Generator.* debug
+
+summary
+
+show taps
+
+show voltage    ! sequence voltage magnitudes
+show voltage  LN Nodes   ! Detailed
+show power ! sequence powers
+show power MVA elem   ! show powers in MVA, element by element
+sample
+export Monitor element=b2

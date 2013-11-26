@@ -1,0 +1,4 @@
+new regcontrol.2728  transformer=28-27 winding=2 Vreg=330 band=20 ptratio=60 delay=60
+!new regcontrol.412  transformer=4-12 winding=2 Vreg=330 band=4 ptratio=60 delay=60
+!new regcontrol.910  transformer=9-10 winding=2 Vreg=330 band=4 ptratio=60 delay=60
+!new regcontrol.610  transformer=6-10 winding=2 Vreg=330 band=4 ptratio=60 delay=60

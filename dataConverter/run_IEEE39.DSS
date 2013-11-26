@@ -1,0 +1,23 @@
+
+// Standard IEEE 39-Bus Transmission System Test Case
+
+Compile master.DSS
+
+Set maxiterations=1000
+Set Maxcontroliter=1000
+Set Algorithm=Newton
+Set CktModel=Positive
+Solve 
+
+_SolveNoControl
+_SolvePFlow
+
+Show Y
+Show BusList
+
+summary
+
+show voltage    ! sequence voltage magnitudes
+show voltage  LN Nodes   ! Detailed
+show power ! sequence powers
+show power MVA elem  

@@ -1,0 +1,12 @@
+New Transformer.12-11 kVAs=[100000 100000]  %R =0.16 XHL=4.35 Wdg=1 R=0 kV=110 Bus=B12 Tap=1.006 Wdg=2 R=0 kV=345 Bus=B11
+New Transformer.12-13 kVAs=[100000 100000]  %R =0.16 XHL=4.35 Wdg=1 R=0 kV=110 Bus=B12 Tap=1.006 Wdg=2 R=0 kV=345 Bus=B13
+New Transformer.6-31 kVAs=[100000 100000]  %R =0 XHL=2.5 Wdg=1 R=0 kV=345 Bus=B6 Tap=1.07 Wdg=2 R=0 kV=22 Bus=B31
+New Transformer.10-32 kVAs=[100000 100000]  %R =0 XHL=2 Wdg=1 R=0 kV=345 Bus=B10 Tap=1.07 Wdg=2 R=0 kV=22 Bus=B32
+New Transformer.19-33 kVAs=[100000 100000]  %R =0.07 XHL=1.42 Wdg=1 R=0 kV=345 Bus=B19 Tap=1.07 Wdg=2 R=0 kV=22 Bus=B33
+New Transformer.20-34 kVAs=[100000 100000]  %R =0.09 XHL=1.8 Wdg=1 R=0 kV=110 Bus=B20 Tap=1.009 Wdg=2 R=0 kV=22 Bus=B34
+New Transformer.22-35 kVAs=[100000 100000]  %R =0 XHL=1.43 Wdg=1 R=0 kV=345 Bus=B22 Tap=1.025 Wdg=2 R=0 kV=22 Bus=B35
+New Transformer.23-36 kVAs=[100000 100000]  %R =0.05 XHL=2.72 Wdg=1 R=0 kV=345 Bus=B23 Tap=1 Wdg=2 R=0 kV=22 Bus=B36
+New Transformer.25-37 kVAs=[100000 100000]  %R =0.06 XHL=2.32 Wdg=1 R=0 kV=345 Bus=B25 Tap=1.025 Wdg=2 R=0 kV=22 Bus=B37
+New Transformer.2-30 kVAs=[100000 100000]  %R =0 XHL=1.81 Wdg=1 R=0 kV=345 Bus=B2 Tap=1.025 Wdg=2 R=0 kV=22 Bus=B30
+New Transformer.29-38 kVAs=[100000 100000]  %R =0.08 XHL=1.56 Wdg=1 R=0 kV=345 Bus=B29 Tap=1.025 Wdg=2 R=0 kV=22 Bus=B38
+New Transformer.19-20 kVAs=[100000 100000]  %R =0.07 XHL=1.38 Wdg=1 R=0 kV=345 Bus=B19 Tap=1.06 Wdg=2 R=0 kV=110 Bus=B20

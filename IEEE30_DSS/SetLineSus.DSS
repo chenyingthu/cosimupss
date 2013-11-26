@@ -1,0 +1,54 @@
+! Line definitions
+
+! Note, the line data are given in pu. However, the OpenDSS works in Ohms
+! The per unit values are converted to ohms using 100 MVA base and the voltage base of the first bus
+! No capacitance was defined for the 33 and 11 kv lines.
+
+line.1-2.C1=0
+line.1-3.C1=0
+line.2-4.C1=0
+line.3-4.C1=0
+line.2-5.C1=0
+line.2-6.C1=0
+line.4-6.C1=0
+line.5-7.C1=0
+line.6-7.C1=0
+line.6-8.C1=0
+line.8-28.C1=0
+line.6-28.C1=0
+line.1-2.C1=0
+line.1-3.C1=0
+line.2-4.C1=0
+line.3-4.C1=0
+line.2-5.C1=0
+line.2-6.C1=0
+line.4-6.C1=0
+line.5-7.C1=0
+line.6-7.C1=0
+line.6-8.C1=0
+line.8-28.C1=0
+line.6-28.C1=0
+line.1-2.C0=0
+line.1-3.C0=0
+line.2-4.C0=0
+line.3-4.C0=0
+line.2-5.C0=0
+line.2-6.C0=0
+line.4-6.C0=0
+line.5-7.C0=0
+line.6-7.C0=0
+line.6-8.C0=0
+line.8-28.C0=0
+line.6-28.C0=0
+line.1-2.C0=0
+line.1-3.C0=0
+line.2-4.C0=0
+line.3-4.C0=0
+line.2-5.C0=0
+line.2-6.C0=0
+line.4-6.C0=0
+line.5-7.C0=0
+line.6-7.C0=0
+line.6-8.C0=0
+line.8-28.C0=0
+line.6-28.C0=0

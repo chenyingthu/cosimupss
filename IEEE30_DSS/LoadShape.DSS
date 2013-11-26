@@ -1,0 +1,3 @@
+New "LoadShape.LoadShape1" npts=2880 sinterval=30 mult=(File=LoadShape1.csv)
+New "LoadShape.LoadShape2" npts=2880 sinterval=30 mult=(File=LoadShape2.csv)
+
