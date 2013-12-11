@@ -158,16 +158,19 @@ while (~converged & i < max_it)
         dVm_dVa(idx_zVm, nonref)   dVm_dVm(idx_zVm, nonref);
         ];
     
-    %% compute update step
-    J = H'*R_inv*H;
-    F = H'*R_inv*(z-z_est); % evalute F(x)
+    
     if ~isobservable(H, pv, pq)
         error('doSE: system is not observable');
     end
+    
+    %% compute update step
+    J = H'*R_inv*H;
+    F = H'*R_inv*(z-z_est); % evalute F(x)
+   
     dx = (J \ F);
 
     %% check for convergence
-    normF = norm(F, inf);
+    normF = norm(dx, inf);
     if verbose > 1
         fprintf('\niteration [%3d]\t\tnorm of mismatch: %10.3e', i, normF);
     end

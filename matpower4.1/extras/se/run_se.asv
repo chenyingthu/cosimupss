@@ -1,7 +1,4 @@
-function [baseMVA, bus, gen, branch, success, et, z, z_est, error_sqrsum] = stateEstimate(casename, measure, idx, sigma, type_initialguess, V0)
-
-
-
+function [baseMVA, bus, gen, branch, success, et, z, z_est, error_sqrsum] = run_se(casename, measure, idx, sigma, type_initialguess, V0)
 
 
 %% read data & convert to internal bus numbering

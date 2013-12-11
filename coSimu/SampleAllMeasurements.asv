@@ -271,18 +271,10 @@ elseif Config.falseDataSchema == 2
                     
                     idxLine = find(ResultData.allLineHeadBusIdx == busIdx);
                     if ~isempty(idxLine)
-                        ph = CurrentStatus.plineHeadMeas(idxLine) ;
-                        CurrentStatus.plineHeadMeas(idxLine) = ph * (1 + loadRandDir* fa.erroRatio);
-                        qh = CurrentStatus.qlineHeadMeas(idxLine) ;
-                        CurrentStatus.qlineHeadMeas(idxLine) = qh * (1 + loadRandDir * fa.erroRatio);
-                    end
-                    
-                    idxLine = find(ResultData.allLineTailBusIdx == busIdx);
-                    if ~isempty(idxLine)
-                        pt = CurrentStatus.plineTailMeas(idxLine) ;
-                        CurrentStatus.plineTailMeas(idxLine) = pt * (1 + loadRandDir* fa.erroRatio);
-                        qt = CurrentStatus.qlineTailMeas(idxLine) ;
-                        CurrentStatus.qlineTailMeas(idxLine) = qt * (1 + loadRandDir * fa.erroRatio);
+                        ph = CurrentStatus.p(idxLoad) ;
+                        CurrentStatus.ploadMeas(idxLoad) = pl * (1 + loadRandDir* fa.erroRatio);
+                        qh = CurrentStatus.qloadMeas(idxLoad) ;
+                        CurrentStatus.qloadMeas(idxLoad) = ql * (1 + loadRandDir * fa.erroRatio);
                     end
                     
                     

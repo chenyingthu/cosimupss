@@ -36,6 +36,22 @@ function [ ResultData ] = SetupResultDataSet( Config , DSSCircuit , CurrentStatu
         iTransf = transfers.next;
     end
 
+    lines = DSSCircuit.Lines;
+    ResultData.nLines = lines.count;
+    ResultData.allLineName=cell([ResultData.nLines,1]);
+    ResultData.allLineIdx = [];
+    ResultData.allLineHeadBusIdx = [];
+    ResultData.allLineTailBusIdx = [];
+    iLine = lines.first;
+    while iLine > 0
+        ResultData.allLineName{iLine} = lines.name;
+        fromBus = str2num(lines.Bus1(2:end));
+        endBus = str2num(lines.Bus2(2:end));
+        ResultData.allLineIdx = [ResultData.allLineIdx; find(CurrentStatus.branch(:,1)==fromBus & CurrentStatus.branch(:,2) == endBus)];        
+        ResultData.allLineHeadBusIdx = [ResultData.allLineHeadBusIdx; find(CurrentStatus.bus(:,1)==fromBus)];
+        ResultData.allLineTailBusIdx = [ResultData.allLineTailBusIdx; find(CurrentStatus.bus(:,1)==endBus)];
+        iLine = lines.next;
+    end
            
     loads = DSSCircuit.load;
     iLoad = loads.first;
@@ -54,11 +70,7 @@ function [ ResultData ] = SetupResultDataSet( Config , DSSCircuit , CurrentStatu
     ResultData.allLoadIdx = zeros(ResultData.nLoad, 1);
     for i = 1:ResultData.nLoad
         ResultData.allLoadIdx(i) = find(CurrentStatus.bus(:,1)==ResultData.allLoadID(i));
-    end
-        
-    
-    
-    
+    end   
     
     ResultData.allTransfTHis = [];
     
@@ -80,6 +92,17 @@ function [ ResultData ] = SetupResultDataSet( Config , DSSCircuit , CurrentStatu
     ResultData.qLForCtrlHis = [];
     
     ResultData.ctrlQueue = [];
+    
+        
+    ResultData.allLineHeadPHis = [];
+    ResultData.allLineHeadQHis = [];
+    ResultData.allLineTailPHis = [];
+    ResultData.allLineTailQHis = [];
+    
+    ResultData.allTransfHeadPHis = [];
+    ResultData.allTransfHeadQHis = [];
+    ResultData.allTransfTailPHis = [];
+    ResultData.allTransfTailQHis = [];
     
     
     ResultData.sheddedLoad = [];

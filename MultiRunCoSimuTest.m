@@ -4,6 +4,7 @@ clear
 addpath([pwd,'/coSimu']);
 addpath([pwd,'./IEEE30_DSS']);
 addpath([pwd, './matpower4.1']);
+addpath([pwd, './matpower4.1/extras/se']);
 
 % 1. we should define the cross sets of variables used to adjust the config
 InitialConfig;

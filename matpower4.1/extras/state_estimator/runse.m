@@ -129,6 +129,7 @@ else                                %% AC formulation
         error('Only Newton''s method, fast-decoupled, and Gauss-Seidel power flow algorithms currently implemented.');
     end
     
+    
     %% update data matrices with solution
     [bus, gen, branch] = pfsoln(baseMVA, bus, gen, branch, Ybus, Yf, Yt, V, ref, pv, pq);
 end

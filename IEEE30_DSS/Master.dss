@@ -22,7 +22,9 @@ Redirect Capacitors.DSS
 
 Redirect Generators.DSS
 
-Redirect Monitors.DSS
+Redirect Monitors_load.DSS
+Redirect Monitors_line.DSS
+Redirect Monitors_transf.DSS
 
 Redirect Regulator.DSS
 

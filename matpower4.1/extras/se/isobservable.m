@@ -76,6 +76,7 @@ if check_reason && ~TorF
                 for k = 1:j-1
                     colK = H(:, k);
                     if rank([colK colJ]) < 2 % k(th) column vector is linearly dependent of j(th) column vector
+                        [colK colJ]
                         varKName = getVarName(k, pv, pq);
                         fprintf('Warning: %d(th) column vector (w.r.t. %s) of H is linearly dependent of %d(th) column vector (w.r.t. %s)!\n', j, varJName, k, varKName);
                         return;
@@ -86,3 +87,5 @@ if check_reason && ~TorF
     fprintf('Warning: No specific reason was found for system being not observable.\n');
     end
 end
+
+

@@ -1,0 +1,15 @@
+New Monitor.transfH6-9    element=Transformer.6-9     Terminal=1 mode=17
+New Monitor.transfH6-10   element=Transformer.6-10    Terminal=1 mode=17
+New Monitor.transfH9-11   element=Transformer.9-11    Terminal=1 mode=17
+New Monitor.transfH9-10   element=Transformer.9-10    Terminal=1 mode=17
+New Monitor.transfH4-12   element=Transformer.4-12    Terminal=1 mode=17
+New Monitor.transfH12-13  element=Transformer.12-13   Terminal=1 mode=17
+New Monitor.transfH28-27  element=Transformer.28-27   Terminal=1 mode=17
+
+New Monitor.transfT6-9    element=Transformer.6-9     Terminal=2 mode=17
+New Monitor.transfT6-10   element=Transformer.6-10    Terminal=2 mode=17
+New Monitor.transfT9-11   element=Transformer.9-11    Terminal=2 mode=17
+New Monitor.transfT9-10   element=Transformer.9-10    Terminal=2 mode=17
+New Monitor.transfT4-12   element=Transformer.4-12    Terminal=2 mode=17
+New Monitor.transfT12-13  element=Transformer.12-13   Terminal=2 mode=17
+New Monitor.transfT28-27  element=Transformer.28-27   Terminal=2 mode=17

@@ -37,7 +37,7 @@ for i = 1 : ResultData.nLoad
 end
 ResultData.sheddedLoad = sheddedLoad*Config.DSSStepsize/3600;
 
-ResultData.performance.Ee = ResultData.overallPlossKWH * Config.normalEPrice - ResultData.performance.EeBase;
+ResultData.performance.Ee = ResultData.overallPlossKWH * Config.normalEPrice; %- ResultData.performance.EeBase;
 ResultData.performance.Eq = ResultData.badQosLoad * Config.badQosPenaltyPrice;
 ResultData.performance.Es = ResultData.sheddedLoad * Config.loadShedPenaltyPrice;
 ResultData.performance.all = ResultData.performance.Ee + ResultData.performance.Eq + ResultData.performance.Es;

@@ -15,11 +15,27 @@ if Config.limitControlled == 1
     CurrentStatus.gen(ResultData.allGenIdx,10) = max(CurrentStatus.genPMeasKw*0.8/1e3, CurrentStatus.genControllabilty(ResultData.allGenIdx, 2));
 end
 
+
+
+
+%% run state estimation
+% flat start
+if Config.seEnable == 1
+    [baseMVA, bus, gen, branch, se_success] = StateEstimate(ResultData, CurrentStatus);
+    if se_success == 1
+        CurrentStatus.bus = bus;
+        CurrentStatus.branch = branch;
+        CurrentStatus.gen = gen;
+    else
+        disp(['t = ', num2str(ResultData.t(end)),' >>>>>>>>>>>>>>>> se failed']);
+    end
+end
+
+
 %% run opf
 optresult = runopf(CurrentStatus, Config.opt);
 
 %% set opf result back to opendss as control set point
-
 if optresult.success == 1
     ResultData.pLForCtrlHis = [ResultData.pLForCtrlHis, CurrentStatus.ploadMeas];
     ResultData.qLForCtrlHis = [ResultData.qLForCtrlHis, CurrentStatus.qloadMeas];

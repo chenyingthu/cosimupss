@@ -6,6 +6,19 @@ function  [ResultData] = RecordRealSystemStatus(DSSCircuit, ResultData)
     ResultData.allQLoadHis = [ResultData.allQLoadHis, qloadMeas];
     ResultData.sheddedLoadHis = [ResultData.sheddedLoadHis, ones(size(ploadMeas))];
 
+    
+    [plineHead, qlineHead, plineTail, qlineTail] = ExtractMonitorDataOfPQLine(DSSCircuit);
+    ResultData.allLineHeadPHis = [ResultData.allLineHeadPHis, plineHead];
+    ResultData.allLineHeadQHis = [ResultData.allLineHeadQHis, qlineHead];
+    ResultData.allLineTailPHis = [ResultData.allLineTailPHis, plineTail];
+    ResultData.allLineTailQHis = [ResultData.allLineTailQHis, qlineTail];
+    
+    [plineHead, qlineHead, plineTail, qlineTail] = ExtractMonitorDataOfPQTransf(DSSCircuit);
+    ResultData.allTransfHeadPHis = [ResultData.allTransfHeadPHis, plineHead];
+    ResultData.allTransfHeadQHis = [ResultData.allTransfHeadQHis, qlineHead];
+    ResultData.allTransfTailPHis = [ResultData.allTransfTailPHis, plineTail];
+    ResultData.allTransfTailQHis = [ResultData.allTransfTailQHis, qlineTail];
+    
     % record tap changes
     transfers = DSSCircuit.Transformers;
     iTransf = transfers.first;
@@ -28,6 +41,9 @@ function  [ResultData] = RecordRealSystemStatus(DSSCircuit, ResultData)
     end
     ResultData.allPGenHis = [ResultData.allPGenHis, genPMeasKw];
     ResultData.allQGenHis = [ResultData.allQGenHis, genQMeasKva];
+    
+    
+    % recod all p and q flowing on line
     
     
     % p loss & all bus V

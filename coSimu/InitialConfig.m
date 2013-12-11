@@ -11,9 +11,11 @@ Config.caseName='case_IEEE30';
 Config.vSrcIdx = 1;
 Config.loadshape = 'loadshape2';
 Config.loadmult = 1.0;
+%% for state estimation
+Config.seEnable = 0;
 
 %% for communications and controls
-Config.measLagSchema = 2; %1 for perfect comm with no latency; 2 for same latency for all tunnels; 3 for dif. latency for dif. tunnels;
+Config.measLagSchema = 1; %1 for perfect comm with no latency; 2 for same latency for all tunnels; 3 for dif. latency for dif. tunnels;
 Config.measAllLatency = 5; % for latency of Config.measAllLatency*Config.DSSStepsize 
 Config.measLaggedTunnel = 1 : 1 : 30;
 Config.measTunnelLatency = zeros(size(Config.measLaggedTunnel));
@@ -24,11 +26,11 @@ Config.genSetpointType = 2; % 1 for v ; 2 for q
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%for bad data injection%%%%%%%%%%%%%%%%%%%
 Config.falseDataSchema = 2; % 0 for no false data  ; 1 for random erro based on white noise ; 2 for special false data strategy
-Config.measErroRatio = 5; % for the random erro 
+Config.measErroRatio = 10; % for the random erro 
 %%%%%%%%%%%%%define a false attack element
-FalseData.toBus = 5;
+FalseData.toBus = 1:30;
 FalseData.strategy = 4; % for random erro on the pl and ql; 
-FalseData.erroRatio = -1; 
+FalseData.erroRatio = 0.8; 
 FalseData.maxErroRatio = 1.5; 
 FalseData.erroRatioStep = 0.05; 
 FalseData.augDir = 1;
@@ -45,8 +47,8 @@ Config.vLow4LoadShed = 0.85;
 Config.vHigh4LoadShed = 1.5;
 Config.vLow4LoadBack = 0.9;
 Config.vHigh4LoadBack = 1.5;
-Config.vShedSample = 2;
-Config.vRecoverSample = 2;
+Config.vShedSample = 4;
+Config.vRecoverSample = 4;
 
 
 %% for performance evaluation
