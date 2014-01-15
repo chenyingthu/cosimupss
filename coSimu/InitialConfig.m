@@ -1,13 +1,13 @@
 
 
-Config.basedir = 'C:\clouddisk\work\projects\cyber-security\cosimulator opendss-matlab\';
+Config.basedir = [pwd, '\'];;
 Config.DSSMaster= 'IEEE30_DSS\Master.dss';
 Config.DSSStepsize = 30;
 Config.opt = mpoption('VERBOSE',0, 'OUT_ALL', 0);
 Config.opfControlPerod = 10; % opf control period in min
 Config.limitControlled = 1;
 Config.num_pts = 24*60*60/Config.DSSStepsize;
-Config.caseName='case_IEEE30';
+Config.caseName='case_ieee30';
 Config.vSrcIdx = 1;
 Config.loadshape = 'loadshape2';
 Config.loadmult = 1.0;
@@ -25,8 +25,8 @@ Config.ctrlTGap = 5; % control time within current time +/- ctrlTGap => ctrl ope
 Config.genSetpointType = 2; % 1 for v ; 2 for q
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%for bad data injection%%%%%%%%%%%%%%%%%%%
-Config.falseDataSchema = 2; % 0 for no false data  ; 1 for random erro based on white noise ; 2 for special false data strategy
-Config.measErroRatio = 10; % for the random erro 
+Config.falseDataSchema = 1; % 0 for no false data  ; 1 for random erro based on white noise ; 2 for special false data strategy
+Config.measErroRatio = 2; % for the random erro 
 %%%%%%%%%%%%%define a false attack element
 FalseData.toBus = 1:30;
 FalseData.strategy = 4; % for random erro on the pl and ql; 
